@@ -1,8 +1,32 @@
 .menu {
   background: @standard;
+
+  @media (min-width: @tablet-width) {
+    background: @white;
+  }
 }
 
-.menu a {
+.menu-logo {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.menu-nav {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.menu-nav a {
+  min-height: 55px;
   color: @white;
   font-family: "PTSans", sans-serif;
   font-weight: 700;
@@ -14,4 +38,31 @@
   align-items: center;
   text-align: center;
   justify-content: center;
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 26px;
+    color: @black;
+    box-shadow: none;
+  }
+}
+
+.menu-nav a:first-child {
+  position: absolute;
+  right: 20px;
+  box-shadow: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.menu-nav a:last-child {
+  box-shadow: none;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+
+  @media (min-width: @tablet-width) {
+    background: none;
+  }
 }
