@@ -1,9 +1,18 @@
 body {
+  width: 320px;
   margin: 0;
   font-family: "PTSans", sans-serif;
   min-height: 320px;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
 }
 
 .visually-hidden {

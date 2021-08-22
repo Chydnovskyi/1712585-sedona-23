@@ -1,6 +1,12 @@
 .else-list {
   list-style: none;
   background: @EEEEEE;
+  margin: 0;
+  padding: 0;
+}
+
+.else-item {
+  position: relative;
 }
 
 .else-item h3 {
@@ -13,4 +19,19 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+}
+
+.else-item::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 280px;
+  height: 1px;
+  background: #D6D6D6;
+  bottom: 1px;
+  left: 20px;
+}
+
+.else-item:last-child:before {
+  display: none;
 }
