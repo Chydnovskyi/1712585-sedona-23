@@ -1,5 +1,6 @@
 .menu {
   background: @standard;
+  display: block;
 
   @media (min-width: @tablet-width) {
     background: @white;
@@ -18,15 +19,19 @@
 
 .menu-nav {
   position: relative;
+  display: none;
 
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-around;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 43px;
   }
 }
 
 .menu-nav a {
-  min-height: 55px;
+  min-height: 56px;
   color: @white;
   font-family: "PTSans", sans-serif;
   font-weight: 700;
@@ -45,6 +50,7 @@
     line-height: 26px;
     color: @black;
     box-shadow: none;
+    width: 153px;
   }
 }
 
@@ -58,6 +64,18 @@
   }
 }
 
+.menu-nav a:nth-child(2) {
+  @media (min-width: @desktop-width) {
+    margin-right: 86px;
+  }
+}
+
+.menu-nav a:nth-child(4) {
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+  }
+}
+
 .menu-nav a:last-child {
   box-shadow: none;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
@@ -65,4 +83,16 @@
   @media (min-width: @tablet-width) {
     background: none;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 87px;
+  }
+}
+
+.menu__show {
+  display: block;
+}
+
+.menu__btn--show {
+  display: none;
 }

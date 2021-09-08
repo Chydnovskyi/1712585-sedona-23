@@ -3,6 +3,58 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.images::before {
+  display: block;
+  content: "";
+  width: 160px;
+  height: 57px;
+  background: url("../img/vectors/Vector-1.png") no-repeat;
+  position: absolute;
+  left: 160px;
+  bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 384px;
+    background: url("../img/vectors/intro-tablet-1.png") no-repeat;
+    left: 0;
+    bottom: -1px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 600px;
+    background: url("../img/vectors/intro-1-desktop.png");
+  }
+}
+
+.images::after {
+  display: block;
+  content: "";
+  width: 160px;
+  height: 57px;
+  background: url("../img/vectors/Vector.png") no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 384px;
+    background: url("../img/vectors/intro-tablet-2.png") no-repeat;
+    left: 385px;
+    bottom: -1px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 600px;
+    background: url("../img/vectors/intro-desktop-2.png");
+    left: 600px;
+  }
 }
 
 .images__promo {
@@ -12,4 +64,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    min-height: 518px;
+    background: @standard url("../img/back-tablet.jpg") no-repeat;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    background: @standard url("../img/back-desktop.jpg") no-repeat;
+  }
+}
+
+.images__promo img {
+  @media (min-width: @tablet-width) {
+    width: 461px;
+    height: 350px;
+    padding-bottom: 15px;
+  }
 }

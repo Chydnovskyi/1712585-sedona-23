@@ -2,10 +2,12 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <div class="wrapper">
     <header class="header">
       <div class="header__logo">
       <a href="">
@@ -14,9 +16,9 @@
       </div>
       <div class="menu">
         <div class="menu-logo">
-          <a href=""><img src="./img/icon-menu.png" alt="menu"></a>
+          <a href="" class="menu__btn menu__btn--show"><img src="./img/icon-menu.png" alt="menu"></a>
         </div>
-        <nav class="menu-nav">
+        <nav class="menu-nav menu__show">
           <a href=""><img src="./img/icon-cross.png" alt=""></a>
           <a href="index.html">Главная</a>
           <a href="catalog.html">фото и видео</a>
@@ -153,6 +155,7 @@
         </a>
       </section>
     </footer>
-
+  </div>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

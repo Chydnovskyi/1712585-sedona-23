@@ -1,11 +1,61 @@
+.sedona {
+  position: relative;
+  padding: 32px 18px 11px 17px;
+
+  @media (min-width: @tablet-width) {
+    padding: 43px 124px 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 55px 285px 44px;
+  }
+}
+
+.sedona::before {
+  display: block;
+  content: "";
+  width: 160px;
+  height: 37px;
+  background: url("../img/vectors/left-reason1.png") no-repeat;
+  position: absolute;
+  bottom: -37px;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.sedona::after {
+  display: block;
+  content: "";
+  width: 160px;
+  height: 37px;
+  background: url("../img/vectors/rightreason1.png") no-repeat;
+  position: absolute;
+  bottom: -37px;
+  left: 159px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .sedona h3 {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+  margin: 0 12px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .sedona p {
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
+  margin: 0;
+  padding-top: 30px;
 }
