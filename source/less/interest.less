@@ -1,13 +1,40 @@
+.interest {
+  padding: 35px 0 65px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 55px 155px 74px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 55px 370px 82px;
+  }
+}
+
 .interest h3 {
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .interest p {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  margin: 0;
+  padding: 19px 30px 44px 29px;
+
+  @media (min-width: @tablet-width) {
+    padding: 32px 0 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 35px 0 59px;
+  }
 }
 
 .interest a {
@@ -17,5 +44,15 @@
   line-height: 26px;
   text-decoration: none;
   background: @standard;
-  padding: 15px 32px 17px;
+  padding: 15px 46px 17px;
+
+  @media (min-width: @tablet-width) {
+    padding: 15px 136px 17px;
+  }
+}
+
+.interest span {
+  @media (min-width: @tablet-width) {
+    padding: 0 80px;
+  }
 }
