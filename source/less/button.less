@@ -1,8 +1,104 @@
 .button {
+  font-family: "PTsans", sans-serif;
+  width: 280px;
+  min-height: 58px;
   border: none;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   color: @white;
   background: @standard;
+  padding: 7px 6px 1px 3px;
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    margin-left: 60px;
+    padding: 3px 13px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 120px;
+    width: 480px;
+    padding: 0;
+  }
+}
+
+.doubts__miksher-btn {
+  background: #f2f2f2;
+  min-height: 66px;
+  margin-top: -4px;
+  padding: 22px 23px 21px;
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    background: none;
+    padding: 22px 42px 34px 36px;
+  }
+}
+
+.doubts__miksher-btn button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.btn-replay svg {
+  fill: #5c6870;
+
+  @media (min-width: @tablet-width) {
+    fill: @white;
+  }
+}
+
+.btn-replay:hover svg {
+  fill: #333333;
+
+  @media (min-width: @tablet-width) {
+    fill: @opacity2-white;
+  }
+}
+
+.btn-subtitles {
+  margin-left: auto;
+}
+
+.btn-subtitles svg {
+  fill: #5c6870;
+
+  @media (min-width: @tablet-width) {
+    fill: @white;
+  }
+}
+
+.btn-subtitles:hover svg {
+  fill: #333333;
+
+  @media (min-width: @tablet-width) {
+    fill: @opacity2-white;
+  }
+}
+
+.btn-fullscreen {
+  margin-left: 31px;
+}
+
+.btn-fullscreen svg {
+  fill: #5c6870;
+
+  @media (min-width: @tablet-width) {
+    fill: @white;
+  }
+}
+
+.btn-fullscreen:hover svg {
+  fill: #333333;
+
+  @media (min-width: @tablet-width) {
+    fill: @opacity2-white;
+  }
 }

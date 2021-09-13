@@ -1,11 +1,97 @@
+.doubts {
+  padding: 10px 0 105px;
+
+  @media (min-width: @tablet-width) {
+    padding: 38px 60px 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 61px 200px 84px;
+  }
+}
+
 .doubts h3 {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .doubts p {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  margin: 0;
+  padding: 28px 27px 34px;
+
+  @media (min-width: @tablet-width) {
+    padding: 33px 95px 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 33px 170px 78px;
+  }
+}
+
+.doubts__img {
+  position: relative;
+}
+
+.doubts__miksher {
+  width: 280px;
+  position: absolute;
+  min-height: 111px;
+  bottom: -62px;
+  left: 20px;
+  background: @opacity2-black;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    position: absolute;
+    min-height: 93px;
+    bottom: 4px;
+    left: 0;
+  }
+}
+
+.doubts__range + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 235px;
+  height: 3px;
+  background: @opacity-white;
+  top: 22px;
+  left: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 389px;
+    top: 45px;
+    left: 93px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 539px;
+  }
+}
+
+.doubts__range + label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: #ffffff;
+  border-radius: 50%;
+  top: 19px;
+  left: 58px;
+
+  @media (min-width: @tablet-width) {
+    top: 42px;
+    left: 206px;
+  }
 }

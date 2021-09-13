@@ -1,20 +1,144 @@
 .promo__sedona {
+  position: relative;
   min-height: 158px;
   background: @standard url("../img/back-else.jpg") no-repeat center;
+  background-position-y: -56px;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    min-height: 290px;
+    background: @standard url("../img/back-tablet-catalog.jpg") no-repeat;
+    background-position-y: -56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 301px;
+    background: @standard url("../img/back-desktop-catalog.jpg") no-repeat;
+    background-position-y: -56px;
+  }
+}
+
+.promo__sedona::before {
+  display: block;
+  content: "";
+  width: 160px;
+  height: 57px;
+  background: url("../img/vectors/Vector-1.png") no-repeat;
+  position: absolute;
+  left: 161px;
+  bottom: -1px;
+
+  @media (min-width: @tablet-width) {
+    width: 384px;
+    background: url("../img/vectors/intro-tablet-1.png") no-repeat;
+    left: 0;
+    bottom: -1px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 600px;
+    background: url("../img/vectors/intro-1-desktop.png");
+  }
+}
+
+.promo__sedona::after {
+  display: block;
+  content: "";
+  width: 160px;
+  height: 57px;
+  background: url("../img/vectors/Vector.png") no-repeat;
+  position: absolute;
+  left: -1px;
+  bottom: -1px;
+
+  @media (min-width: @tablet-width) {
+    width: 384px;
+    background: url("../img/vectors/intro-tablet-2.png") no-repeat;
+    left: 385px;
+    bottom: -1px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 600px;
+    background: url("../img/vectors/intro-desktop-2.png");
+    left: 600px;
+  }
+}
+
+.promo__sedona picture {
+  top: 52px;
+  position: absolute;
+
+  @media (min-width: @tablet-width) {
+    top: 95px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 101px;
+  }
+}
+
+.promo__text {
+  padding: 32px 15px 32px 19px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 64px 162px 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 100px 386px 81px;
+  }
+}
+
+.promo__text--form {
+  padding: 36px 15px 18px 19px;
+
+  @media (min-width: @tablet-width) {
+    padding: 62px 162px 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 114px 380px 36px;
+  }
 }
 
 .promo__text h3 {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .promo__text p {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  margin: 0;
+  padding-top: 28px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 32px;
+  }
+}
+
+.promo__text p::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 1px;
+  background-color: #e5e5e5;
+  bottom: 0;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
