@@ -29,11 +29,11 @@
   padding: 28px 27px 34px;
 
   @media (min-width: @tablet-width) {
-    padding: 33px 95px 80px;
+    padding: 32px 95px 78px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 33px 170px 78px;
+    padding: 33px 170px 76px;
   }
 }
 
@@ -41,12 +41,19 @@
   position: relative;
 }
 
+.doubts__img img {
+  @media (min-width: @tablet-width) {
+    height: 500px;
+  }
+}
+
 .doubts__miksher {
   width: 280px;
   position: absolute;
   min-height: 111px;
   bottom: -62px;
-  left: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   background: @opacity2-black;
 
   @media (min-width: @tablet-width) {
@@ -54,7 +61,6 @@
     position: absolute;
     min-height: 93px;
     bottom: 4px;
-    left: 0;
   }
 }
 

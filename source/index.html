@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" href="img/favicon/152.png">
     <link rel="manifest" href="manifest.webmanifest">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div class="wrapper">
@@ -16,28 +16,19 @@
         <div class="header__logo">
         <a href="" class="header__img header__img--show">
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/logotype-desktop.svg">
+            <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
             <img src="./img/logotype-mobile.svg" alt="logo">
           </picture>
         </a>
         </div>
-        <div class="menu">
+        <div class="menu menu--no-js">
           <div class="menu-logo">
-            <a href="" class="menu__btn menu__btn--show">
-              <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.9 0H0V4H22.9V0Z"/>
-                <path d="M22.9 9H0V13H22.9V9Z"/>
-                <path d="M22.9 18H0V22H22.9V18Z"/>
-              </svg>
-            </a>
           </div>
+          <button class="menu__btn">
+            переключить
+          </button>
           <nav class="menu-nav menu__show">
-            <a href="">
-              <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M23 2.77477L20.0991 0L11.5 8.22522L2.9009 0L0 2.77477L8.5991 11L0 19.2252L2.9009 22L11.5 13.7748L20.0991 22L23 19.2252L14.4009 11L23 2.77477Z"/>
-              </svg>
-            </a>
             <a href="index.html">Главная</a>
             <a href="catalog.html">фото и видео</a>
             <a href="form.html">форма отзыва</a>
@@ -65,9 +56,9 @@
               <p>Седона не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/reason-1-desktop.jpg">
-              <source media="(min-width: 768px)" srcset="img/reason-1-tablet.jpg">
-              <img src="./img/reason-1.png" alt="Первая причина" >
+              <source media="(min-width: 1200px)" srcset="img/reason-1-desktop.jpg, img/reason-1-desktop@2x.jpg">
+              <source media="(min-width: 768px)" srcset="img/reason-1-tablet.jpg, img/reason-1-tablet@2x.jpg">
+              <img src="./img/reason-1.jpg" srcset="./img/reason-1@2x.jpg" width="100%" height="260" alt="Первая причина" >
             </picture>
             </li>
               <li class="about-item">
@@ -92,9 +83,9 @@
               <p>Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/reason-2-desktop.jpg">
-              <source media="(min-width: 768px)" srcset="img/reason-2-tablet.jpg">
-              <img src="img/reason-2.png" alt="изображение дома">
+              <source media="(min-width: 1200px)" srcset="img/reason-2-desktop.jpg, img/reason-2-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/reason-2-tablet.jpg, img/reason-2-tablet@2x.jpg">
+              <img src="img/reason-2.jpg" srcset="img/reason-2@2x.jpg" width="100%" height="260" alt="изображение дома">
             </picture>
           </li>
               <li class="else-item">
@@ -109,7 +100,7 @@
               </li>
               <li class="else-item">
                 <h3>мало туристов</h3>
-                <p class="reason-numbers">— №5 —</p>
+                <p class="else-item-paragraph">— №5 —</p>
                 <p>большинство едет в гранд каньон и толпится там</p>
               </li>
         </ul>
@@ -163,6 +154,6 @@
       </section>
     </footer>
   </div>
-    <script src="./js/menu.js"></script>
+    <script src="./js/script.min.js"></script>
   </body>
 </html>

@@ -1,0 +1,131 @@
+.modal-error {
+  display: none;
+  width: 320px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: "PT Sans", "Arial", sans-serif;
+  background: @white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  padding: 40px 42px 35px 41px;
+
+  @media (min-width: @tablet-width) {
+    width: 400px;
+    min-height: 347px;
+    padding: 52px 47px 49px 46px;
+  }
+}
+
+.modal-error--show {
+  display: block;
+}
+
+.modal-error h3 {
+  font-size: 18px;
+  line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 0 30px;
+  }
+}
+
+.modal-error p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 36px;
+}
+
+.modal-error a {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-decoration: none;
+  color: @white;
+  background: #81b3d2;
+  padding: 18px 64px 14px 63px;
+
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    padding: 18px 125px 14px;
+  }
+}
+
+
+// modal-succsesfull
+
+.modal-succsesfull {
+  display: none;
+  width: 320px;
+  min-height: 323px;
+  text-transform: uppercase;
+  font-family: "PT Sans", "Arial", sans-serif;
+  background: @white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+
+  @media (min-width: @tablet-width) {
+    width: 640px;
+    min-height: 347px;
+  }
+}
+
+.modal-succsesfull--show {
+  display: block;
+}
+
+.modal-succsesfull__wrapper {
+  box-sizing: border-box;
+  padding: 38px 39px 0 37px;
+
+  @media (min-width: @tablet-width) {
+    padding: 55px 99px 0 97px;
+  }
+}
+
+.modal-succsesfull h3 {
+  font-size: 18px;
+  line-height: 26px;
+
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
+}
+
+.modal-succsesfull p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 36px;
+}
+
+.modal-succsesfull__btn {
+  min-height: 98px;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  @media (min-width: @tablet-width) {
+    min-height: 146px;
+  }
+}
+
+.modal-succsesfull__btn a {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-decoration: none;
+  color: @white;
+  background: #81b3d2;
+  padding: 18px 62px 14px 60px;
+
+
+  @media (min-width: @tablet-width) {
+    padding: 18px 160px 14px;
+  }
+}

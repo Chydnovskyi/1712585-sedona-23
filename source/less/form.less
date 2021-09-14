@@ -14,7 +14,7 @@
 }
 
 .form legend {
-  font-family: "PTsans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 18px;
@@ -59,7 +59,7 @@
 }
 
 .form__fieldset:nth-child(3) {
-  padding: 0 20px 41px;
+  padding: 0 20px 39px;
 
   @media (min-width: @tablet-width) {
     grid-row: 1;
@@ -67,7 +67,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 20px 66px 160px;
+    padding: 0 20px 63px 160px;
   }
 }
 
@@ -108,7 +108,7 @@
 }
 
 .form__fieldset input {
-  font-family: "PTsans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -136,7 +136,7 @@
 }
 
 .form__fieldset--last legend {
-  padding-top: 19px;
+  padding-top: 21px;
   padding-bottom: 37px;
 
   @media (min-width: @tablet-width) {
@@ -167,6 +167,11 @@
     bottom: 19px;
     left: -184px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+    left: -340px;
+  }
 }
 
 .form__fieldset:nth-child(2) legend::after {
@@ -182,6 +187,11 @@
     right: -184px;
     bottom: 19px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+    right: -341px;
+  }
 }
 
 .form__fieldset--last:nth-child(4) legend {
@@ -195,6 +205,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 17px;
     padding-left: 360px;
     padding-right: 316px;
   }
@@ -211,7 +222,12 @@
     height: 1px;
     background: #dbdbdb;
     left: -52px;
-    bottom: 25px;
+    bottom: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+    left: 53px;
   }
 }
 
@@ -226,7 +242,12 @@
     height: 1px;
     background: #dbdbdb;
     right: -74px;
-    bottom: 25px;
+    bottom: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+    right: 10px;
   }
 }
 
@@ -235,7 +256,7 @@
 
   @media (min-width: @tablet-width) {
     text-align: center;
-    padding: 11px 60px 12px;
+    padding: 11px 60px;
   }
 }
 
@@ -252,6 +273,11 @@
     bottom: 28px;
     left: -139px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+    left: -295px;
+  }
 }
 
 .form__fieldset:nth-child(5) legend::after {
@@ -266,6 +292,11 @@
     background: #dbdbdb;
     right: -139px;
     bottom: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+    right: -295px;
   }
 }
 
@@ -282,7 +313,7 @@
   width: 279px;
   min-height: 160px;
   box-sizing: border-box;
-  font-family: "PTsans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -429,6 +460,12 @@
   }
 }
 
+.form__item--contact label {
+  @media (min-width: @desktop-width) {
+    padding-top: 3px;
+  }
+}
+
 .form__item--contact input {
   width: 100%;
   min-height: 58px;
@@ -486,6 +523,11 @@
     bottom: 29px;
     left: 383px;
   }
+
+  @media (min-width: @desktop-width) {
+    bottom: 50px;
+    left: 600px;
+  }
 }
 
 
@@ -507,11 +549,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 0 0 16px;
+    margin: 0 0 0 19px;
   }
 }
 
-.form__item--img {
+.form__item-img {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -527,7 +569,7 @@
   }
 }
 
-.form__item--mod .form__item--img {
+.form__item--mod .form__item-img {
   top: 32px;
 
   @media (min-width: @desktop-width) {
@@ -569,9 +611,14 @@
   width: 54px;
   height: 54px;
   left: -77px;
-  top: -15px;
+  top: -18px;
   background: #f2f2f2;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    left: -74px;
+    top: -17px;
+  }
 }
 
 .form-input-radio + label:hover::before {
@@ -584,9 +631,13 @@
   width: 20px;
   height: 20px;
   left: -60px;
-  top: 2px;
+  top: -1px;
   border-radius: 50%;
   background: #333333;
+
+  @media (min-width: @tablet-width) {
+    left: -57px;
+  }
 }
 
 .form-input-radio:checked + label::before {
@@ -595,9 +646,14 @@
   width: 54px;
   height: 54px;
   left: -77px;
-  top: -15px;
+  top: -18px;
   background: #f2f2f2;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    left: -74px;
+    top: -17px;
+  }
 }
 
 .form-input-radio:checked + label:hover::before {
@@ -609,8 +665,8 @@
   position: absolute;
   width: 56px;
   height: 56px;
-  left: -80px;
-  top: -17px;
+  left: -81px;
+  top: -19px;
   background: #f2f2f2;
   border-radius: 5px;
 }
@@ -624,8 +680,8 @@
   position: absolute;
   width: 56px;
   height: 56px;
-  left: -80px;
-  top: -17px;
+  left: -81px;
+  top: -19px;
   background: #f2f2f2;
   border-radius: 5px;
 }
@@ -640,7 +696,7 @@
   width: 23px;
   height: 16px;
   left: -63px;
-  top: 3px;
+  top: 1px;
   background: url("../img/tick.svg");
 }
 
@@ -653,7 +709,7 @@
 }
 
 .form__pole p {
-  font-family: "PTsans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 14px;

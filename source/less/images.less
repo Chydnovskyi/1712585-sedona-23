@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow-x: hidden;
 
   @media (min-width: @tablet-width) {
     margin-top: 0;
@@ -13,72 +14,82 @@
 .images::before {
   display: block;
   content: "";
-  width: 160px;
+  width: 100%;
   height: 57px;
-  background: url("../img/vectors/Vector-1.png") no-repeat;
+  background: url("../img/vectors/left.svg") no-repeat;
   position: absolute;
-  left: 161px;
   bottom: -1px;
+  transform: translateX(-160px);
+  background-position-x: right;
 
   @media (min-width: @tablet-width) {
-    width: 384px;
-    background: url("../img/vectors/intro-tablet-1.png") no-repeat;
-    left: 0;
+    transform: translateX(-383px);
     bottom: -1px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 600px;
-    background: url("../img/vectors/intro-1-desktop.png");
+    transform: translateX(-600px);
   }
 }
 
 .images::after {
   display: block;
   content: "";
-  width: 160px;
+  width: 100%;
   height: 57px;
-  background: url("../img/vectors/Vector.png") no-repeat;
+  background: url("../img/vectors/right.svg") no-repeat;
   position: absolute;
-  left: -1px;
+  transform: translateX(150px);
   bottom: -1px;
 
   @media (min-width: @tablet-width) {
-    width: 384px;
-    background: url("../img/vectors/intro-tablet-2.png") no-repeat;
-    left: 385px;
+    left: 233px;
     bottom: -1px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 600px;
-    background: url("../img/vectors/intro-desktop-2.png");
-    left: 600px;
+    left: 450px;
   }
 }
 
 .images__promo {
-  width: 320px;
+  width: 100%;
   min-height: 389px;
   background: @standard url("../img/back-mobile.jpg") no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-size: cover;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/back-mobile@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
-    width: 768px;
     min-height: 518px;
     background: @standard url("../img/back-tablet.jpg") no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/back-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 1200px;
     background: @standard url("../img/back-desktop.jpg") no-repeat;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/back-desktop@2x.jpg");
+    }
   }
 }
 
 .images__promo img {
+  margin-top: 5px;
+
   @media (min-width: @tablet-width) {
+    margin-top: 0;
     width: 461px;
     height: 350px;
     padding-bottom: 15px;
