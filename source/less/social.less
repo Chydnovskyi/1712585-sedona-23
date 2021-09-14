@@ -11,8 +11,6 @@
 }
 
 .social-item {
-  width: 46px;
-  height: 47px;
   margin-right: 6px;
   display: flex;
   align-items: center;
@@ -20,6 +18,30 @@
   background: @standard;
 }
 
+.social-item a {
+  width: 46px;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-item svg {
+  fill: @white;
+}
+
 .social-item:last-child {
   margin: 0;
+}
+
+.social-item a:hover {
+  background: #669ec0;
+}
+
+.social-item a:focus {
+  background: #669ec0;
+}
+
+.social-item a:focus svg {
+  fill: @opacity-white;
 }

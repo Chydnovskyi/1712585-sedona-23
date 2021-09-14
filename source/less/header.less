@@ -1,11 +1,14 @@
 .header {
   background-color: @white;
   position: relative;
+  min-height: 56px;
 }
 
 .header__logo {
+  position: absolute;
+  left: 107px;
+
   @media (min-width: @tablet-width) {
-    position: absolute;
     left: 334px;
   }
 
@@ -17,4 +20,8 @@
 .header__logo picture {
   position: relative;
   z-index: 1;
+}
+
+.header__img--show {
+  display: none;
 }

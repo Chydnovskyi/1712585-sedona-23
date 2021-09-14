@@ -2,6 +2,7 @@
   background: @standard;
   display: block;
 
+
   @media (min-width: @tablet-width) {
     background: @white;
   }
@@ -18,11 +19,15 @@
 }
 
 .menu-nav {
-  position: relative;
   display: none;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  background: @standard;
 
   @media (min-width: @tablet-width) {
     display: flex;
+    background: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -89,8 +94,36 @@
   }
 }
 
+.menu-nav a:first-child svg {
+  fill: @white;
+}
+
+.menu-nav a:first-child:hover {
+  opacity: 0.6;
+}
+
+.menu-nav a:first-child:focus {
+  opacity: 0.3;
+}
+
+.menu-nav a:hover {
+  color: #81b3d2;
+}
+
+.menu-nav a:focus {
+  color: @opacity-black;
+}
+
 .menu__show {
   display: block;
+}
+
+.menu__btn svg {
+  fill: #81b3d2;
+}
+
+.menu__btn:hover svg {
+  opacity: 0.3;
 }
 
 .menu__btn--show {

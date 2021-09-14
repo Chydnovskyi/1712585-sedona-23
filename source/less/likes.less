@@ -1,9 +1,40 @@
 .likes {
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    align-items: center;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
 }
 
 .likes h4 {
   font-weight: 700;
   font-size: 14px;
   line-height: 24px;
+  margin: 0;
+  padding: 3px 0 0 14px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 0 0 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @white;
+  }
+}
+
+.likes svg {
+  fill: @black;
+  opacity: 0.3;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    fill: @white;
+    opacity: 1;
+  }
 }
