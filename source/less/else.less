@@ -30,7 +30,7 @@
   padding-right: 41px;
 
   @media (min-width: @tablet-width) {
-    padding: 42px 60px;
+    padding: 42px 60px 42px 57px;
   }
 
   @media (min-width: @desktop-width) {
@@ -42,7 +42,7 @@
   padding: 25px 36px 24px;
 
   @media (min-width: @tablet-width) {
-    padding: 42px 49px;
+    padding: 42px 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -70,6 +70,10 @@
   font-size: 14px;
   line-height: 21px;
   margin: 0;
+
+  @media (min-width: @desktop-width) {
+    font-size: 12px;
+  }
 }
 
 .else-item p:nth-child(2) {
@@ -78,6 +82,10 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 13px;
+    padding-bottom: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
     padding-bottom: 24px;
   }
 }
@@ -91,8 +99,16 @@
   background: #d6d6d6;
   bottom: 1px;
   left: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .else-item:last-child::before {
   display: none;
+}
+
+.else-item-paragraph {
+  padding-top: 10px;
 }
