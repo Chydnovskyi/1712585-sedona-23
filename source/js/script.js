@@ -1,5 +1,5 @@
 const menuBtn = document.querySelector('.menu__btn');
-const menuNav = document.querySelector('.menu-nav');
+const menuNav = document.querySelector('.menu__nav');
 const headerLogo = document.querySelector('.header__img');
 const menu = document.querySelector('.menu');
 

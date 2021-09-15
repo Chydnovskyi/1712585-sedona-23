@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -16,7 +14,7 @@
     <div class="wrapper">
       <header class="header">
         <div class="header__logo">
-        <a href="./index.html" class="header__img header__img--show">
+        <a href="" class="header__img header__img--show">
           <picture>
             <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
@@ -25,12 +23,12 @@
         </a>
         </div>
         <div class="menu menu--no-js">
-          <div class="menu-logo">
+          <div class="menu__logo">
           </div>
           <button class="menu__btn">
             переключить
           </button>
-          <nav class="menu-nav menu__show">
+          <nav class="menu__nav menu__show">
             <a href="index.html">Главная</a>
             <a href="catalog.html">фото и видео</a>
             <a href="form.html">форма отзыва</a>
@@ -95,15 +93,15 @@
         <legend>Ваше общее впечатление:</legend>
         <ul class="form__list form__list--impressions">
           <li class="form__item form__item--impressions">
-            <input class="form-input-radio visually-hidden" type="radio" name="positive" id="positive" checked>
+            <input class="form__input-radio visually-hidden" type="radio" name="positive" id="positive" checked>
             <label for="positive">Скорее положительное</label>
           </li>
           <li class="form__item form__item--impressions">
-            <input class="form-input-radio visually-hidden" type="radio" name="positive" id="negative">
+            <input class="form__input-radio visually-hidden" type="radio" name="positive" id="negative">
             <label for="negative">Скорее отрицательное</label>
           </li>
           <li class="form__item form__item--impressions">
-            <input class="form-input-radio visually-hidden" type="radio" name="positive" id="null">
+            <input class="form__input-radio visually-hidden" type="radio" name="positive" id="null">
             <label for="null">Затрудняюсь ответить</label>
           </li>
         </ul>
@@ -112,19 +110,19 @@
         <legend>посещенные достопримечательности:</legend>
         <ul class="form__list form__list--visit">
           <li class="form__item form__item--visit">
-            <input class="form-input-checkbox visually-hidden" type="checkbox" name="most" id="most" checked>
+            <input class="form__input-checkbox visually-hidden" type="checkbox" name="most" id="most" checked>
             <label for="most">Мост Дьявола</label>
           </li>
           <li class="form__item form__item--visit">
-            <input class="form-input-checkbox visually-hidden" type="checkbox" name="gora" id="gora" checked>
+            <input class="form__input-checkbox visually-hidden" type="checkbox" name="gora" id="gora" checked>
             <label for="gora">Гора-Колокол</label>
           </li>
           <li class="form__item form__item--visit">
-            <input class="form-input-checkbox visually-hidden" type="checkbox" name="slide" id="slide" checked>
+            <input class="form__input-checkbox visually-hidden" type="checkbox" name="slide" id="slide" checked>
             <label for="slide">Слайд-парк</label>
           </li>
           <li class="form__item form__item--visit">
-            <input class="form-input-checkbox visually-hidden" type="checkbox" name="skali" id="skali">
+            <input class="form__input-checkbox visually-hidden" type="checkbox" name="skali" id="skali">
             <label for="skali">Красные скалы</label>
           </li>
         </ul>
@@ -156,10 +154,10 @@
       </div>
     </main>
     <footer class="footer">
-      <section class="footer-hashtag">
+      <section class="footer__hashtag">
         <h3>#visitSEDONA</h3>
       </section>
-      <section class="footer-social">
+      <section class="footer__social">
         <ul class="social-list">
           <li class="social-item">
             <a href="">
@@ -184,7 +182,7 @@
           </li>
         </ul>
       </section>
-      <section class="footer-developed">
+      <section class="footer__developed">
         <a href="https://htmlacademy.ru">
           разработано
           <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">

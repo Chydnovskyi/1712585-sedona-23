@@ -9,7 +9,7 @@
   }
 }
 
-.menu-logo {
+.menu__logo {
   position: absolute;
   top: 17px;
   right: 20px;
@@ -19,7 +19,7 @@
   }
 }
 
-.menu-nav {
+.menu__nav {
   display: none;
   position: absolute;
   z-index: 2;
@@ -36,11 +36,11 @@
   }
 }
 
-.menu--no-js .menu-nav {
+.menu--no-js .menu__nav {
   position: static;
 }
 
-.menu-nav a {
+.menu__nav a {
   min-height: 56px;
   color: @white;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -74,20 +74,20 @@
 //   }
 // }
 
-.menu-nav a:first-child {
+.menu__nav a:first-child {
   @media (min-width: @desktop-width) {
     margin-right: 86px;
     margin-left: 42px;
   }
 }
 
-.menu-nav a:nth-child(4n + 3) {
+.menu__nav a:nth-child(4n + 3) {
   @media (min-width: @tablet-width) {
     margin-left: auto;
   }
 }
 
-.menu-nav a:last-child {
+.menu__nav a:last-child {
   box-shadow: none;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
 
@@ -102,23 +102,23 @@
   }
 }
 
-.menu-nav a:first-child svg {
+.menu__nav a:first-child svg {
   fill: @white;
 }
 
-.menu-nav a:first-child:hover {
+.menu__nav a:first-child:hover {
   opacity: 0.6;
 }
 
-.menu-nav a:first-child:focus {
+.menu__nav a:first-child:focus {
   opacity: 0.3;
 }
 
-.menu-nav a:hover {
+.menu__nav a:hover {
   color: #81b3d2;
 }
 
-.menu-nav a:focus {
+.menu__nav a:focus {
   color: @opacity-black;
 }
 
