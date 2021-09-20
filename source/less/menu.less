@@ -46,7 +46,7 @@
   position: static;
 }
 
-.menu__nav a {
+.menu__link {
   min-height: 56px;
   color: @white;
   font-family: "PTSans", "Arial", sans-serif;
@@ -70,30 +70,20 @@
   }
 }
 
-// .menu-nav a:first-child {
-//   position: absolute;
-//   right: 20px;
-//   box-shadow: none;
-
-//   @media (min-width: @tablet-width) {
-//     display: none;
-//   }
-// }
-
-.menu__nav a:first-child {
+.menu__link:first-child {
   @media (min-width: @desktop-width) {
     margin-right: 86px;
     margin-left: 42px;
   }
 }
 
-.menu__nav a:nth-child(4n + 3) {
+.menu__link:nth-child(4n + 3) {
   @media (min-width: @tablet-width) {
     margin-left: auto;
   }
 }
 
-.menu__nav a:last-child {
+.menu__link:last-child {
   box-shadow: none;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
 
@@ -108,20 +98,23 @@
   }
 }
 
-.menu__nav a:first-child:hover {
-  opacity: 0.6;
+.menu__link:hover {
+  background: #669ec0;
+
+  @media (min-width: @tablet-width) {
+    background: none;
+    color: #81b3d2;
+  }
 }
 
-.menu__nav a:first-child:focus {
-  opacity: 0.3;
-}
+.menu__link:focus {
+  color: @opacity-white;
+  background: #5496bd;
 
-.menu__nav a:hover {
-  color: #81b3d2;
-}
-
-.menu__nav a:focus {
-  color: @opacity-black;
+  @media (min-width: @tablet-width) {
+    background: none;
+    color: @opacity-black;
+  }
 }
 
 .menu__show {
@@ -152,11 +145,11 @@
   display: none;
 }
 
-.menu__btn svg {
-  fill: #81b3d2;
+.menu__btn:hover {
+  opacity: 0.6;
 }
 
-.menu__btn:hover svg {
+.menu__btn:focus {
   opacity: 0.3;
 }
 
@@ -166,4 +159,18 @@
 
 .menu__btn--close {
   background: url("../img/icon-cross.svg");
+}
+
+.menu__btn--close:hover {
+  opacity: 0.6;
+}
+
+.menu__btn--close:focus {
+  opacity: 0.3;
+}
+
+.menu__link--current {
+  @media (min-width: @tablet-width) {
+    color: #766357;
+  }
 }

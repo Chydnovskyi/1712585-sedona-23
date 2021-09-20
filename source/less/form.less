@@ -5,13 +5,13 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-bottom: 65px;
+    padding-bottom: 61px;
     width: 768px;
     margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 70px;
+    padding-bottom: 66px;
     width: auto;
   }
 }
@@ -34,7 +34,7 @@
 
 .form__fieldset {
   border: none;
-  padding: 18px 20px 7px;
+  padding: 18px 20px 9px;
   margin: 0;
   position: relative;
 
@@ -48,16 +48,16 @@
 }
 
 .form__fieldset--contact {
-  padding: 18px 20px 0;
+  padding: 18px 20px 25px;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 3;
-    padding: 18px 60px 0;
+    padding: 18px 60px 23px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 18px 120px 0;
+    padding: 18px 123px 0 120px;
   }
 }
 
@@ -98,7 +98,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 43px 120px 53px;
+    padding: 43px 120px 54px;
   }
 }
 
@@ -118,13 +118,13 @@
   background: #f2f2f2;
   border: 4px solid #f2f2f2;
   box-sizing: border-box;
-  padding-top: 6px;
-  padding-left: 18px;
+  padding-left: 23px;
   margin-left: 9px;
 }
 
 .form__fieldset input:hover {
   background: #e5e5e5;
+  border: 4px solid #e5e5e5;
 }
 
 .form__fieldset input:focus {
@@ -390,24 +390,46 @@
 .form__list--fullname {
   display: flex;
   flex-direction: column;
+  padding-top: 1px;
+  padding-bottom: 17px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 35px;
-    padding-left: 1px;
+    padding-top: 36px;
+    padding-left: 42px;
+    padding-right: 40px;
   }
 
   @media (min-width: @desktop-width) {
     text-align: left;
     padding-left: 42px;
+    padding-right: 100px;
   }
 }
 
-.form__list--fullname li {
+.form__item--fullname {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   padding-bottom: 20px;
+}
+
+.form__item--fullname input {
+  flex-grow: 1;
+  margin-left: 13px;
+  padding-left: 18px;
+  padding-top: 5px;
+}
+
+.form__list--fullname label {
+  margin-top: 3px;
 }
 
 .form__item--patronymic {
   padding-bottom: 0;
+}
+
+.form__item--patronymic input {
+  margin-left: 16px;
 }
 
 .form__list--visit {
@@ -454,6 +476,9 @@
 .form__list--contact {
   text-align: left;
   margin-top: -2px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
   @media (min-width: @desktop-width) {
     display: flex;
@@ -462,6 +487,8 @@
     padding-top: 51px;
     padding-bottom: 35px;
     margin-top: 0;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -488,12 +515,12 @@
 .form__item--contact input {
   width: 100%;
   min-height: 58px;
-  margin: 9px 0 13px 0;
+  margin: 8px 0 3px 0;
   padding: 4px 0 0 18px;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 24px;
+    margin-bottom: 14px;
   }
 
   @media (min-width: @desktop-width) {
@@ -555,12 +582,6 @@
   display: none;
 }
 
-.form__item--mod {
-  @media (min-width: @desktop-width) {
-    margin-left: auto;
-  }
-}
-
 .form__item--mod input {
   margin: 6px 0 29px 0;
 
@@ -582,7 +603,7 @@
   height: 58px;
   background: #e6e6e6;
   right: 0;
-  top: 35px;
+  top: 34px;
 
   @media (min-width: @desktop-width) {
     top: 0;
@@ -652,6 +673,10 @@
   background: #e5e5e5;
 }
 
+.form__input-radio + label:focus::before {
+  background: #d5d5d5;
+}
+
 .form__input-radio:disabled + label::before {
   content: "";
   position: absolute;
@@ -701,6 +726,15 @@
 
 .form__input-radio:checked + label:hover::before {
   background: #e5e5e5;
+}
+
+.form__input-radio:checked + label:focus::after {
+  background: #333333;
+  opacity: 0.3;
+}
+
+.form__input-radio:checked + label:focus::before {
+  background: #d5d5d5;
 }
 
 .form__input-checkbox:focus + label {
@@ -757,6 +791,20 @@
   top: 3px;
   background: url("../img/tick.svg");
 }
+
+.form__input-checkbox + label:focus::before {
+  background: #d5d5d5;
+}
+
+.form__input-checkbox:checked + label:focus::before {
+  background: #d5d5d5;
+}
+
+.form__input-checkbox:checked + label:focus::after {
+  fill: #333333;
+  opacity: 0.3;
+}
+
 
 .form__pole {
   display: none;

@@ -1,4 +1,4 @@
-.social-list {
+.social__list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -6,11 +6,11 @@
   justify-content: center;
 
   @media (min-width: @tablet-width) {
-    margin: 8px 7px 0 0;
+    margin: 0 8px 1px 0;
   }
 }
 
-.social-item {
+.social__item {
   margin-right: 6px;
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@
   background: @standard;
 }
 
-.social-item a {
+.social__item a {
   width: 46px;
   height: 47px;
   display: flex;
@@ -26,22 +26,22 @@
   justify-content: center;
 }
 
-.social-item svg {
+.social__item svg {
   fill: @white;
 }
 
-.social-item:last-child {
+.social__item:last-child {
   margin: 0;
 }
 
-.social-item a:hover {
+.social__item a:hover {
   background: #669ec0;
 }
 
-.social-item a:focus {
+.social__item a:focus {
   background: #669ec0;
 }
 
-.social-item a:focus svg {
+.social__link:focus svg {
   fill: @opacity-white;
 }
