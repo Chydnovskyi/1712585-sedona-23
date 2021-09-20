@@ -5,16 +5,19 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-bottom: 62px;
+    padding-bottom: 65px;
+    width: 768px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 69px;
+    padding-bottom: 70px;
+    width: auto;
   }
 }
 
 .form legend {
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 18px;
@@ -31,7 +34,7 @@
 
 .form__fieldset {
   border: none;
-  padding: 18px 20px 27px;
+  padding: 18px 20px 7px;
   margin: 0;
   position: relative;
 
@@ -44,7 +47,7 @@
   }
 }
 
-.form__fieldset:nth-child(2) {
+.form__fieldset--contact {
   padding: 18px 20px 0;
 
   @media (min-width: @tablet-width) {
@@ -58,8 +61,8 @@
   }
 }
 
-.form__fieldset:nth-child(3) {
-  padding: 0 20px 39px;
+.form__fieldset--review {
+  padding: 0 20px 43px;
 
   @media (min-width: @tablet-width) {
     grid-row: 1;
@@ -71,7 +74,7 @@
   }
 }
 
-.form__fieldset:nth-child(4) {
+.form__fieldset--attraction {
   padding: 25px 0 40px;
 
   @media (min-width: @tablet-width) {
@@ -85,7 +88,7 @@
   }
 }
 
-.form__fieldset:nth-child(5) {
+.form__fieldset--description {
   padding: 15px 0 47px;
 
   @media (min-width: @tablet-width) {
@@ -108,15 +111,15 @@
 }
 
 .form__fieldset input {
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   background: #f2f2f2;
-  border: none;
+  border: 4px solid #f2f2f2;
   box-sizing: border-box;
   padding-top: 6px;
-  padding-left: 23px;
+  padding-left: 18px;
   margin-left: 9px;
 }
 
@@ -126,16 +129,11 @@
 
 .form__fieldset input:focus {
   background: @white;
-  border: 4px solid #e5e5e5;
   box-sizing: border-box;
   outline: none;
 }
 
-.form__fieldset--last {
-  padding-right: 0;
-}
-
-.form__fieldset--last legend {
+.form__fieldset--review legend {
   padding-top: 21px;
   padding-bottom: 37px;
 
@@ -144,7 +142,7 @@
   }
 }
 
-.form__fieldset:nth-child(2) legend {
+.form__fieldset--contact legend {
   position: relative;
 
   @media (min-width: @tablet-width) {
@@ -154,7 +152,7 @@
   }
 }
 
-.form__fieldset:nth-child(2) legend::before {
+.form__fieldset--contact legend::before {
   display: none;
 
   @media (min-width: @tablet-width) {
@@ -174,7 +172,7 @@
   }
 }
 
-.form__fieldset:nth-child(2) legend::after {
+.form__fieldset--contact legend::after {
   display: none;
 
   @media (min-width: @tablet-width) {
@@ -194,7 +192,7 @@
   }
 }
 
-.form__fieldset--last:nth-child(4) legend {
+.form__fieldset--attraction legend {
   padding: 15px 2px 0 0;
   position: relative;
 
@@ -211,7 +209,7 @@
   }
 }
 
-.form__fieldset--last:nth-child(4) legend::before {
+.form__fieldset--attraction legend::before {
   display: none;
 
   @media (min-width: @tablet-width) {
@@ -231,7 +229,7 @@
   }
 }
 
-.form__fieldset--last:nth-child(4) legend::after {
+.form__fieldset--attraction legend::after {
   display: none;
 
   @media (min-width: @tablet-width) {
@@ -251,7 +249,7 @@
   }
 }
 
-.form__fieldset:nth-child(5) legend {
+.form__fieldset--description legend {
   position: relative;
 
   @media (min-width: @tablet-width) {
@@ -260,7 +258,7 @@
   }
 }
 
-.form__fieldset:nth-child(5) legend::before {
+.form__fieldset--description legend::before {
   display: none;
 
   @media (min-width: @tablet-width) {
@@ -280,7 +278,7 @@
   }
 }
 
-.form__fieldset:nth-child(5) legend::after {
+.form__fieldset--description legend::after {
   display: none;
 
   @media (min-width: @tablet-width) {
@@ -300,7 +298,15 @@
   }
 }
 
-.form__fieldset--last label {
+.form__fieldset--review label {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  position: relative;
+  text-transform: none;
+}
+
+.form__fieldset--attraction label {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -313,7 +319,7 @@
   width: 279px;
   min-height: 160px;
   box-sizing: border-box;
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -346,6 +352,15 @@
   }
 }
 
+.form__input::placeholder {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: @black;
+}
+
 .form__surname {
   width: 192px;
   min-height: 58px;
@@ -373,6 +388,9 @@
 }
 
 .form__list--fullname {
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: @tablet-width) {
     padding-top: 35px;
     padding-left: 1px;
@@ -388,7 +406,7 @@
   padding-bottom: 20px;
 }
 
-.form__list--fullname li:last-child {
+.form__item--patronymic {
   padding-bottom: 0;
 }
 
@@ -439,6 +457,7 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding-top: 51px;
     padding-bottom: 35px;
@@ -470,7 +489,7 @@
   width: 100%;
   min-height: 58px;
   margin: 9px 0 13px 0;
-  padding: 4px 0 0 22px;
+  padding: 4px 0 0 18px;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
@@ -512,16 +531,17 @@
   }
 }
 
-.form__fieldset:nth-child(3)::before {
+.form__fieldset--review::before {
   @media (min-width: @tablet-width) {
     content: "";
     display: block;
     position: absolute;
     width: 1px;
-    height: 292px;
+    height: auto;
     background: #e5e5e5;
     bottom: 29px;
     left: 383px;
+    top: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -531,7 +551,7 @@
 }
 
 
-.form__fieldset:nth-child(5)::before {
+.form__fieldset--description::before {
   display: none;
 }
 
@@ -578,6 +598,9 @@
 }
 
 .form__list--impressions {
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: @tablet-width) {
     padding-left: 37px;
   }
@@ -590,7 +613,7 @@
 .form__item--impressions {
   padding-left: 78px;
   text-align: left;
-  padding-bottom: 44px;
+  padding-bottom: 42px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 52px;
@@ -605,13 +628,17 @@
   padding-bottom: 0;
 }
 
+.form__input-radio:focus + label {
+  outline: 1px solid @black;
+}
+
 .form__input-radio + label::before {
   content: "";
   position: absolute;
   width: 54px;
   height: 54px;
   left: -77px;
-  top: -18px;
+  top: -16px;
   background: #f2f2f2;
   border-radius: 50%;
 
@@ -625,13 +652,29 @@
   background: #e5e5e5;
 }
 
+.form__input-radio:disabled + label::before {
+  content: "";
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  left: -77px;
+  top: -16px;
+  background: #3f0f0f;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    left: -74px;
+    top: -17px;
+  }
+}
+
 .form__input-radio:checked + label::after {
   content: "";
   position: absolute;
   width: 20px;
   height: 20px;
   left: -60px;
-  top: -1px;
+  top: 0;
   border-radius: 50%;
   background: #333333;
 
@@ -646,7 +689,7 @@
   width: 54px;
   height: 54px;
   left: -77px;
-  top: -18px;
+  top: -17px;
   background: #f2f2f2;
   border-radius: 50%;
 
@@ -660,14 +703,29 @@
   background: #e5e5e5;
 }
 
+.form__input-checkbox:focus + label {
+  outline: 1px solid @black;
+}
+
 .form__input-checkbox + label::before {
   content: "";
   position: absolute;
   width: 56px;
   height: 56px;
   left: -81px;
-  top: -19px;
+  top: -18px;
   background: #f2f2f2;
+  border-radius: 5px;
+}
+
+.form__input-checkbox:disabled + label::before {
+  content: "";
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  left: -81px;
+  top: -18px;
+  background: #3f0f0f;
   border-radius: 5px;
 }
 
@@ -681,7 +739,7 @@
   width: 56px;
   height: 56px;
   left: -81px;
-  top: -19px;
+  top: -18px;
   background: #f2f2f2;
   border-radius: 5px;
 }
@@ -696,7 +754,7 @@
   width: 23px;
   height: 16px;
   left: -63px;
-  top: 1px;
+  top: 3px;
   background: url("../img/tick.svg");
 }
 
@@ -709,7 +767,7 @@
 }
 
 .form__pole p {
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 14px;

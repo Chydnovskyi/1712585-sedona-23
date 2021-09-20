@@ -2,7 +2,7 @@
   padding: 35px 0 65px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 58px 155px 74px;
+    padding: 56px 155px 74px;
   }
 
   @media (min-width: @desktop-width) {
@@ -10,7 +10,7 @@
   }
 }
 
-.interest h3 {
+.interest h2 {
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
@@ -29,7 +29,8 @@
   padding: 21px 30px 43px 29px;
 
   @media (min-width: @tablet-width) {
-    padding: 32px 0 53px;
+    line-height: 25px;
+    padding: 33px 0 53px;
   }
 
   @media (min-width: @desktop-width) {
@@ -47,7 +48,7 @@
   padding: 15px 46px 17px;
 
   @media (min-width: @tablet-width) {
-    padding: 15px 136px 17px;
+    padding: 15px 136px 16px;
   }
 }
 
@@ -60,12 +61,14 @@
   background: #5496bd;
 }
 
-.interest span {
-  @media (min-width: @tablet-width) {
-    padding: 0 80px;
-  }
+.interest a:disabled {
+  background: #e5e5e5;
+}
 
-  @media (min-width: @desktop-width) {
-    padding: 0 82px;
+.interest br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }
