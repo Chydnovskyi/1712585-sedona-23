@@ -6,6 +6,12 @@
 
   @media (min-width: @tablet-width) {
     background: @white;
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
   }
 }
 
@@ -43,7 +49,7 @@
 .menu__nav a {
   min-height: 56px;
   color: @white;
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
@@ -100,10 +106,6 @@
     margin-left: 87px;
     margin-right: 45px;
   }
-}
-
-.menu__nav a:first-child svg {
-  fill: @white;
 }
 
 .menu__nav a:first-child:hover {

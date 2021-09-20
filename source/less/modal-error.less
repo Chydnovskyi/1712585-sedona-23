@@ -1,0 +1,76 @@
+.modal-error {
+  position: absolute;
+  top: 1320px;
+  display: none;
+  width: 320px;
+  min-height: 280px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: "PTSans", "Arial", sans-serif;
+  background: @white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  padding: 25px 42px 35px 41px;
+
+  @media (min-width: @tablet-width) {
+    width: 400px;
+    min-height: 347px;
+    top: 1428px;
+    left: 184px;
+    padding: 52px 47px 49px 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 1390px;
+    left: 438px;
+  }
+}
+
+.modal-error--show {
+  display: block;
+}
+
+.modal-error h2 {
+  font-size: 18px;
+  line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 0 30px;
+    margin: 0;
+  }
+}
+
+.modal-error p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 26px;
+  margin-bottom: 41px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 23px;
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 26px;
+    margin-bottom: 54px;
+  }
+}
+
+.modal-error a {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-decoration: none;
+  color: @white;
+  background: #81b3d2;
+  padding: 19px 78px 16px 77px;
+
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    padding: 18px 122px 14px;
+  }
+}

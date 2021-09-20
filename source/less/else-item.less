@@ -1,17 +1,10 @@
-.else-list {
-  list-style: none;
-  background: @EEEEEE;
-  margin: 0;
-  padding: 0;
-}
-
 .else-item {
   background-color: #eeeeee;
   position: relative;
   padding: 21px 0 26px 0;
 }
 
-.else-item:nth-child(6) {
+.else-item--square {
   padding-left: 26px;
   padding-right: 26px;
 
@@ -24,7 +17,7 @@
   }
 }
 
-.else-item:nth-child(7) {
+.else-item--road {
   padding-top: 23px;
   padding-left: 42px;
   padding-right: 41px;
@@ -38,7 +31,7 @@
   }
 }
 
-.else-item:nth-child(8) {
+.else-item--turists {
   padding: 25px 36px 24px;
 
   @media (min-width: @tablet-width) {
@@ -50,7 +43,7 @@
   }
 }
 
-.else-item h3 {
+.else-item h2 {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -72,7 +65,7 @@
   margin: 0;
 }
 
-.else-item p:nth-child(2) {
+.else-item__paragraph {
   padding-top: 12px;
   padding-bottom: 17px;
 
@@ -101,19 +94,15 @@
   }
 }
 
-.else-item:last-child::before {
+.else-item--turists::before {
   display: none;
 }
 
-.else-item__paragraph {
-  padding-top: 10px;
-}
-
-.else-item:last-child .else-item__paragraph {
+.else-item__paragraph--last {
   padding-top: 10px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 12px;
+    padding-top: 14px;
     padding-bottom: 23px;
   }
 }
